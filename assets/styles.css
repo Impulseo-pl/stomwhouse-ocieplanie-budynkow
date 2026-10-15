@@ -1856,3 +1856,170 @@ footer{view-transition-name:mt-foot}
 .btn-accent{color:#fff}
 .nav .nav-links a.btn-accent{color:#fff}
 .btn-accent[data-accent-d],.cta-d .btn-accent{color:#fff}
+
+
+/* ============================================================
+   MOTYW „KLINDWORTH" (polecenie Szymona 15.10.2026: wygląd jak klindworthroofing.com)
+   Beż + grafit + brąz, szeryfowe wersaliki w nagłówkach, przyciski-pigułki,
+   hero z obrazem przyciętym w szewron. Ten blok jest OSTATNI = wygrywa.
+   ============================================================ */
+:root{
+  --paper:#EDE9E2;--paper-2:#E4DED5;--paper-3:#D9D1C5;
+  --ink:#24262B;--ink-soft:#3A3C42;--muted:#5C5A55;--line:rgba(36,38,43,.14);
+  --accent:#AC9376;--accent-d:#6E5A42;--accent-soft:rgba(172,147,118,.14);--gold:#AC9376;
+  --dark:#24262B;
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'DM Sans','Inter',sans-serif;
+}
+h1,h2{font-family:var(--font-display);font-weight:600;text-transform:uppercase;letter-spacing:-.01em;line-height:1.02}
+h3{font-family:var(--font-display);font-weight:600;letter-spacing:-.005em}
+.eyebrow{color:var(--accent-d);letter-spacing:.14em}
+.eyebrow::before{background:var(--accent)}
+
+/* przyciski: pigułki z cienką brązową ramką */
+.btn{border-radius:999px}
+.btn-accent{background:var(--accent-d);border-color:var(--accent-d);color:#fff}
+.btn-accent:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn-ghost{border:1px solid var(--accent);color:var(--ink);background:transparent}
+.btn-light{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+.cta .btn-ghost-cta{color:#fff;border-color:var(--accent)}
+.kw-pill{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.9rem;border:1px solid var(--accent);border-radius:999px;color:var(--ink);font-size:1rem;font-weight:500;background:transparent;transition:background .35s ease,color .35s ease,border-color .35s ease}
+.kw-pill:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.kw-pill-light{color:#fff;border-color:var(--accent)}
+.kw-pill-light:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+.kw-link{display:inline-flex;align-items:center;gap:.45rem;color:var(--accent);font-weight:500;border-bottom:1px solid currentColor;padding-bottom:2px}
+.kw-link:hover .arr{transform:translateX(4px)}
+.kw-link .arr{transition:transform .3s ease}
+
+/* pasek nawigacji: beżowy, ciemny tekst, menu w białej pigułce na środku */
+.nav,.nav.is-stuck,.nav.nav-solid{background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid transparent;box-shadow:none}
+.nav.nav-solid{border-bottom-color:var(--line)}
+.nav::after{display:none}
+.nav .brand .name,.nav.nav-solid .brand .name{color:var(--ink);font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:1.3rem}
+.nav .brand .sub,.nav.nav-solid .brand .sub{color:var(--accent-d)}
+.nav .nav-links a:not(.btn-accent),.nav.nav-solid .nav-links a:not(.btn-accent){color:var(--ink-soft);text-transform:none;letter-spacing:.01em;font-size:.95rem;font-weight:500}
+.nav .nav-links a:not(.btn-accent):hover,.nav .nav-links a.active:not(.btn-accent){color:var(--ink)}
+.nav .nav-links a:not(.btn-accent)::after{background:var(--accent)}
+.nav .nav-toggle span,.nav.nav-solid .nav-toggle span{background:var(--ink)}
+.nav .nav-links a.btn-accent,.nav:not(.nav-solid) .nav-links a.btn-accent,.nav .nav-links a.btn-accent:hover{background:transparent;border:1px solid var(--accent);color:var(--ink);border-radius:999px;text-transform:none;letter-spacing:.01em;font-size:.9rem;font-weight:600;filter:none}
+.nav .nav-links a.btn-accent:hover,.nav:not(.nav-solid) .nav-links a.btn-accent:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+@media (min-width:1101px){
+  .nav .nav-links{background:#fff;border-radius:999px;padding:.35rem .4rem .35rem 1.6rem;box-shadow:0 6px 24px -14px rgba(36,38,43,.35)}
+}
+
+/* ---------- HERO z obrazem w szewronie ---------- */
+.kw-hero{position:relative;background:var(--paper);min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:0;overflow:hidden}
+.kw-hero-art{position:absolute;top:0;right:0;bottom:0;width:58%;clip-path:polygon(42% 0,100% 0,100% 100%,42% 100%,0 50%)}
+.kw-hero-art img{width:100%;height:100%;object-fit:cover;object-position:center}
+.kw-hero-inner{position:relative;z-index:2;padding-block:140px 90px}
+.kw-hero-copy{max-width:520px}
+.kw-kicker{display:block;color:var(--accent-d);text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;margin-bottom:1.1rem}
+.kw-h1{font-size:clamp(2.7rem,1.6rem + 3.6vw,4.9rem);line-height:.98;color:var(--ink);margin-bottom:1.4rem;max-width:11ch}
+.kw-lead{font-size:clamp(1.05rem,1rem + .2vw,1.2rem);line-height:1.6;color:var(--ink-soft);max-width:46ch}
+.kw-hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1.4rem;margin-top:2rem}
+.kw-tel{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink);font-size:1.05rem;white-space:nowrap}
+.kw-tel .ico-tel{color:var(--accent-d)}
+.kw-trust{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+.kw-trust li{display:flex;align-items:center;gap:.5rem}
+.kw-trust li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* ---------- sekcje ciemne ---------- */
+.kw-dark{background:var(--dark);color:#EDE9E2;position:relative;overflow:hidden;padding-block:clamp(72px,9vw,140px)}
+.kw-dark h2,.kw-dark h3{color:#EDE9E2}
+.kw-dark p{color:rgba(237,233,226,.78)}
+.kw-eyebrow{display:block;color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.85rem;margin-bottom:1rem}
+.kw-what::before{content:"STOMWHOUSE";position:absolute;left:50%;top:clamp(40px,6vw,90px);transform:translateX(-50%);font-family:var(--font-display);font-weight:700;font-size:clamp(4rem,14vw,15rem);line-height:1;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(172,147,118,.22);white-space:nowrap;pointer-events:none;user-select:none}
+.kw-what-head{position:relative;max-width:760px;margin:0 auto clamp(48px,6vw,80px);text-align:center}
+.kw-what-head h2{font-size:clamp(2.2rem,1.4rem + 3vw,4rem);margin-bottom:1.4rem}
+.kw-what-head p{font-size:1.1rem;line-height:1.7}
+.kw-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,32px)}
+.kw-feature{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;border-radius:4px}
+.kw-feature img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.16,.84,.44,1)}
+.kw-feature::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,21,24,0) 45%,rgba(20,21,24,.82) 100%)}
+.kw-feature:hover img{transform:scale(1.05)}
+.kw-feature-txt{position:absolute;left:clamp(20px,3vw,40px);right:clamp(20px,3vw,40px);bottom:clamp(20px,3vw,40px);z-index:2}
+.kw-feature-ttl{display:block;font-family:var(--font-display);font-weight:600;text-transform:uppercase;font-size:clamp(1.6rem,1rem + 2vw,2.6rem);line-height:1;color:#fff}
+.kw-feature-sub{display:block;margin-top:.6rem;color:#d9c9b4;font-size:1.05rem}
+
+.kw-work{padding-top:0}
+.kw-work-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap;margin-bottom:clamp(32px,4vw,56px)}
+.kw-huge{font-size:clamp(3rem,1.2rem + 7vw,8.5rem);line-height:.92;letter-spacing:-.02em}
+.kw-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px)}
+.kw-project{display:block}
+.kw-project-img{display:block;aspect-ratio:3/4;overflow:hidden;border-radius:4px}
+.kw-project img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.16,.84,.44,1)}
+.kw-project:hover img{transform:scale(1.05)}
+.kw-project h3{margin-top:1rem;font-size:1.5rem;text-transform:uppercase}
+
+/* ---------- usługi na beżu ---------- */
+.kw-services{background:var(--paper);padding-block:clamp(72px,9vw,140px)}
+.kw-services-head{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.kw-services-head h2{font-size:clamp(2.6rem,1.4rem + 4.4vw,5.5rem)}
+.kw-services-head p{font-size:1.15rem;color:var(--ink-soft);max-width:40ch}
+.kw-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,36px)}
+.kw-card{display:block}
+.kw-card-img{display:block;aspect-ratio:4/3;overflow:hidden;border-radius:4px;margin-bottom:1.3rem}
+.kw-card img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.16,.84,.44,1)}
+.kw-card:hover img{transform:scale(1.05)}
+.kw-card h3{font-size:1.45rem;text-transform:uppercase;margin-bottom:.6rem;color:var(--ink)}
+.kw-card p{color:var(--ink-soft);line-height:1.65}
+.kw-center{text-align:center;margin-top:clamp(36px,5vw,64px)}
+
+/* ---------- pas ze zdjęciem (stopklatka silnika: nieruchome tło na clip-path) ---------- */
+.stopklatka{margin:0;height:min(76vh,680px)}
+.stopklatka::after{content:"";position:absolute;inset:0;background:rgba(20,21,24,.36);pointer-events:none}
+.stopklatka .kw-band-inner{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center}
+.stopklatka .kw-pill{background:rgba(36,38,43,.55);backdrop-filter:blur(6px);font-size:1.1rem;padding:1rem 2.4rem}
+@media (max-width:700px){ .stopklatka{height:52vh;margin:0} }
+
+/* ---------- kroki ---------- */
+.kw-steps{border-top:1px solid rgba(237,233,226,.08)}
+.kw-steps-list{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.4vw,36px)}
+.kw-steps-list li{border-top:1px solid rgba(172,147,118,.5);padding-top:1.4rem}
+.kw-no{display:block;font-family:var(--font-display);font-size:2.4rem;color:var(--accent);line-height:1;margin-bottom:1rem}
+.kw-steps-list h3{font-size:1.3rem;margin-bottom:.6rem}
+.kw-steps-list p{font-size:1rem;line-height:1.65}
+
+/* ---------- finał ---------- */
+.kw-final{text-align:center;border-top:1px solid rgba(237,233,226,.08)}
+.kw-final .kw-huge{margin-bottom:1.6rem}
+.kw-final-tel{display:inline-block;font-family:var(--font-display);font-size:clamp(1.8rem,1.2rem + 2vw,3rem);color:var(--accent);white-space:nowrap}
+.kw-final-actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:1.6rem;margin-top:2rem}
+
+/* ---------- podstrony: nagłówek jak hero (beż + obraz w szewronie) ---------- */
+.pagehead{background:var(--paper);min-height:62vh;min-height:62svh;align-items:center;border-bottom:0}
+.pagehead img{left:auto;right:0;width:52%;clip-path:polygon(38% 0,100% 0,100% 100%,38% 100%,0 50%)}
+.pagehead::after{display:none}
+.pagehead .wrap{color:var(--ink);padding-block:130px 70px}
+.pagehead h1{color:var(--ink);text-shadow:none;max-width:12ch;font-size:clamp(2.5rem,1.5rem + 3.4vw,4.6rem)}
+.pagehead .eyebrow{color:var(--accent-d)}
+.pagehead .eyebrow::before{background:var(--accent)}
+.pagehead p{color:var(--ink-soft);text-shadow:none;max-width:44ch}
+
+/* CTA i stopka w grafitie z brązem */
+.cta{background:var(--dark)}
+.cta::before{display:none}
+.cta .eyebrow{color:var(--accent)}
+footer{background:#1C1D21;color:#EDE9E2}
+footer .name{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.04em}
+footer h4{color:var(--accent)}
+
+@media (max-width:900px){
+  .kw-hero{flex-direction:column;align-items:stretch;min-height:0}
+  .kw-hero-art{position:relative;width:100%;height:32vh;height:32svh;clip-path:polygon(0 0,100% 0,100% 84%,50% 100%,0 84%);order:-1}
+  .kw-hero-inner{padding-block:20px 56px}
+  .kw-h1{font-size:clamp(2.3rem,1.6rem + 3vw,3rem);margin-bottom:1rem}
+  .kw-hero{padding-top:64px}
+  .kw-duo,.kw-trio,.kw-cards{grid-template-columns:1fr}
+  .kw-feature{aspect-ratio:4/4.4}
+  .kw-project-img{aspect-ratio:4/3}
+  .kw-services-head{grid-template-columns:1fr}
+  .kw-steps-list{grid-template-columns:1fr 1fr}
+  .pagehead{flex-direction:column;align-items:stretch;min-height:0;padding-top:64px}
+  .pagehead img{position:relative;width:100%;height:38vh;height:38svh;clip-path:polygon(0 0,100% 0,100% 84%,50% 100%,0 84%)}
+  .pagehead .wrap{padding-block:28px 52px}
+}
+@media (max-width:560px){
+  .kw-steps-list{grid-template-columns:1fr}
+  .kw-what::before{-webkit-text-stroke:1px rgba(172,147,118,.16)}
+}
